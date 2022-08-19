@@ -1,12 +1,36 @@
 ---
+import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
 import Carousel from '../components/Carousel.astro';
-import Navbar from '../components/Navbar.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="LCM Color">
 	<Navbar />
 	<main>
-		<Carousel slide1="/assets/slide1.jpg" slide2="/assets/slide2.jpg" slide3="/assets/slide3.jpg"/>
+		<Carousel 
+		slide1="/assets/slide1.jpg"
+		titleSlide1="LC'M Color Zen"
+		descriptionSlide1="Votre coiffeuse et visagiste à domicile"
+
+		slide2="/assets/slide2.jpg" 
+		titleSlide2="LC'M Color Zen"
+		descriptionSlide2="Coloriste Visagiste"
+		titleSlide3="lol"
+
+		slide3="/assets/slide3.jpg"
+		titleSlide3="LC'M Color Zen"
+		descriptionSlide3="Soin visage LHL"/>
+		
+		<div class="container">
+			<p class="lead">
+				Fini les déplacement et autres contraints ! <br /> Quoi de mieux que de se
+				faire coiffer sans attendre, sans sortir, de chez soi et à des prix attractifs
+				!<br /> N'hésitez pas à créer un moment agréable et convivial en réunissant
+				vos proches lors de ma venue afin de découvrir mes différents services.
+			</p>
+		</div>
+		<hr class="featurette-divider" />
+		<Card />
 	</main>
 </Layout>
