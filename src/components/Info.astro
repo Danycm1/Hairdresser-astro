@@ -1,0 +1,98 @@
+<div class="container">
+    <hr class="featurette-divider" />
+    <div class="row" id="horaires&contacts">
+        <h2 class="featurette-heading">Horaires & Contact</h2>
+        <p class="lead">
+            Je me déplace dans les secteurs du 60 et 95, dans un rayon de 20km
+            en partant de Chambly.
+        </p>
+        <div class="col mb-3">
+            <div class="card h-100 rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Heures d'ouvertures</h5>
+                    <caption
+                        >Vous pouvez me joindre au <span class="fw-bolder"
+                            >06 27 38 57 30
+                        </span>
+                    </caption>
+                    <p class="card-text">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jour</th>
+                                    <th scope="col">Heures</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lundi</td>
+                                    <td>10h - 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Mardi</td>
+                                    <td>10h - 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Mercredi</td>
+                                    <td>10h - 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Jeudi</td>
+                                    <td>10h - 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Vendredi</td>
+                                    <td>10h - 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Samedi</td>
+                                    <td>10h - 19h</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimanche</td>
+                                    <td>Fermé</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted"
+                        >Uniquement sur rendez-vous, appelez vite ! <br /><br
+                        /><br />
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="mapid" class="map-responsive">
+                <!-- map ici -->
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #mapid {
+        height: 537px;
+        width: 500px;
+    }
+</style>
+<script>
+import L from "leaflet";
+
+
+let map = L.map('mapid').setView([49.16608033066788, 2.244747752531686], 10);
+
+let circle = L.circle([49.16608033066788, 2.244747752531686], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0,
+    radius: 40 * 370
+}).addTo(map);
+
+L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    attribution: '&copy; Google Maps'
+}).addTo(map);
+
+
+</script>

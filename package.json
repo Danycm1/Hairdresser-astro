@@ -8,6 +8,11 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/image": "^0.3.4",
+    "@types/leaflet": "^1.7.11",
     "astro": "^1.0.0-rc.8"
+  },
+  "dependencies": {
+    "leaflet": "^1.8.0"
   }
 }
