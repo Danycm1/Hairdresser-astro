@@ -1,32 +1,32 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Layout from '../layouts/Layout.astro';
-import Carousel from '../components/Carousel.astro';
-import Price from '../components/Price.astro';
-import Info from '../components/Info.astro';
-import Gallery from '../components/Gallery.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Carousel from "../components/Carousel.astro";
+import Price from "../components/Price.astro";
+import Info from "../components/Info.astro";
+import Gallery from "../components/Gallery.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="LCM Color">
 	<Navbar />
 	<main>
 		<Carousel
-		slide1="/assets/slide1.webp"
-		titleSlide1="LC'M Color Zen"
-		descriptionSlide1="Votre coiffeuse et visagiste à domicile"
-
-		slide2="/assets/slide2.webp" 
-		titleSlide2="LC'M Color Zen"
-		descriptionSlide2="Coloriste Visagiste"
-
-		slide3="/assets/slide3.webp"
-		titleSlide3="LC'M Color Zen"
-		descriptionSlide3="Soin visage LHL"/>
-		
-		<Price />
-		<Info />
-		<Gallery />
-		<Footer />
+				slide1="/assets/slide1.webp"
+				titleSlide1="LC'M Color Zen"
+				descriptionSlide1="Votre coiffeuse et visagiste à domicile"
+				slide2="/assets/slide2.webp"
+				titleSlide2="LC'M Color Zen"
+				descriptionSlide2="Coloriste Visagiste"
+				slide3="/assets/slide3.webp"
+				titleSlide3="LC'M Color Zen"
+				descriptionSlide3="Soin visage LHL"
+			/>
+		<div class="container">
+			<Price />
+			<Info />
+			<Gallery />
+			<Footer />
+		</div>
 	</main>
 </Layout>
