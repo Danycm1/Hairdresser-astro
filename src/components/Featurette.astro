@@ -1,0 +1,138 @@
+---
+export interface Props {
+    title: string;
+    tablecol1: string;
+    tablecol2: string;
+    caption: string;
+
+    product1?: string;
+    product2?: string;
+    product3?: string;
+    product4?: string;
+    product5?: string;
+    product6?: string;
+    product7?: string;
+    product8?: string;
+    product9?: string;
+    product10?: string;
+    product11?: string;
+
+    price1?: string;
+    price2?: string;
+    price3?: string;
+    price4?: string;
+    price5?: string;
+    price6?: string;
+    price7?: string;
+    price8?: string;
+    price9?: string;
+    price10?: string;
+    price11?: string;
+
+    note: string;
+}
+
+const {
+    title,
+    tablecol1,
+    tablecol2,
+    caption,
+
+    product1,
+    product2,
+    product3,
+    product4,
+    product5,
+    product6,
+    product7,
+    product8,
+    product9,
+    product10,
+    product11,
+
+    price1,
+    price2,
+    price3,
+    price4,
+    price5,
+    price6,
+    price7,
+    price8,
+    price9,
+    price10,
+    price11,
+    note,
+} = Astro.props as Props;
+---
+
+<div class="row featurette">
+    <div class="row">
+        <div class="col mb-2">
+            <div class="card h-100 rounded">
+                <div class="card-body">
+                    <h5 class="card-product">{title}</h5>
+                    <p class="card-text">
+                        {caption && <caption>{caption}</caption>}
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">{tablecol1}</th>
+                                    <th scope="col">{tablecol2}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {product1 && <td>{product1}</td>}
+                                    {price1 && <td>{price1}</td>}
+                                </tr>
+                                <tr>
+                                    {product2 && <td>{product2}</td>}
+                                    {price2 && <td>{price2}</td>}
+                                </tr>
+                                <tr>
+                                    {product3 && <td>{product3}</td>}
+                                    {price3 && <td>{price3}</td>}
+                                </tr>
+                                <tr>
+                                    {product4 && <td>{product4}</td>}
+                                    {price4 && <td>{price4}</td>}
+                                </tr>
+                                <tr>
+                                    {product5 && <td>{product5}</td>}
+                                    {price5 && <td>{price5}</td>}
+                                </tr>
+                                <tr>
+                                    {product6 && <td>{product6}</td>}
+                                    {price6 && <td>{price6}</td>}
+                                </tr>
+                                <tr>
+                                    {product7 && <td>{product7}</td>}
+                                    {price7 && <td>{price7}</td>}
+                                </tr>
+                                <tr>
+                                    {product8 && <td>{product8}</td>}
+                                    {price8 && <td>{price8}</td>}
+                                </tr>
+                                <tr>
+                                    {product9 && <td>{product9}</td>}
+                                    {price9 && <td>{price9}</td>}
+                                </tr>
+                                <tr>
+                                    {product10 && <td>{product10}</td>}
+                                    {price10 && <td>{price10}</td>}
+                                </tr>
+                                <tr>
+                                    {product11 && <td>{product11}</td>}
+                                    {price11 && <td>{price11}</td>}
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{note}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div id="mapid" class="map-responsive"></div>
+
+<script>
+    import L from "leaflet/dist/leaflet.js";
+
+    let map = L.map("mapid").setView(
+        [49.16608033066788, 2.244747752531686],
+        10
+    );
+
+    let circle = L.circle([49.16608033066788, 2.244747752531686], {
+        color: "red",
+        fillColor: "#f03",
+        fillOpacity: 0,
+        radius: 40 * 370,
+    }).addTo(map);
+
+    L.tileLayer("https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+        attribution: "&copy; Google Maps",
+    }).addTo(map);
+</script>
