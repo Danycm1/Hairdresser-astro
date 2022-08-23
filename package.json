@@ -13,6 +13,7 @@
     "astro": "^1.0.0-rc.8"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.0",
     "bootswatch": "^5.2.0",
     "leaflet": "^1.8.0"
