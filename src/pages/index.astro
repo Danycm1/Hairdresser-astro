@@ -10,23 +10,21 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="LCM Color">
 	<Navbar />
-	<main>
-		<Carousel
-				slide1="/assets/slide1.webp"
-				titleSlide1="LC'M Color Zen"
-				descriptionSlide1="Votre coiffeuse et visagiste à domicile"
-				slide2="/assets/slide2.webp"
-				titleSlide2="LC'M Color Zen"
-				descriptionSlide2="Coloriste Visagiste"
-				slide3="/assets/slide3.webp"
-				titleSlide3="LC'M Color Zen"
-				descriptionSlide3="Soin visage LHL"
-			/>
-		<div class="container">
-			<Price />
-			<Info />
-			<Gallery />
-			<Footer />
-		</div>
-	</main>
+	<Carousel
+		slide1="/assets/slide1.webp"
+		titleSlide1="LC'M Color Zen"
+		descriptionSlide1="Votre coiffeuse et visagiste à domicile"
+		slide2="/assets/slide2.webp"
+		titleSlide2="LC'M Color Zen"
+		descriptionSlide2="Coloriste Visagiste"
+		slide3="/assets/slide3.webp"
+		titleSlide3="LC'M Color Zen"
+		descriptionSlide3="Soin visage LHL"
+	/>
+	<div class="container">
+		<Price />
+		<Info />
+		<Gallery />
+		<Footer />
+	</div>
 </Layout>
