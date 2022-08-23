@@ -57,7 +57,8 @@
             </div>
             <div class="card-footer">
                 <small class="text-muted"
-                    >Uniquement sur rendez-vous, appelez vite ! <br /><br /><br/>
+                    >Uniquement sur rendez-vous, appelez vite ! <br /><br /><br
+                    />
                 </small>
             </div>
         </div>
@@ -74,18 +75,21 @@
     }
 </style>
 <script>
-import L from "leaflet";
+    import L from "leaflet";
 
-let map = L.map('mapid').setView([49.16608033066788, 2.244747752531686], 10);
+    let map = L.map("mapid").setView(
+        [49.16608033066788, 2.244747752531686],
+        10
+    );
 
-let circle = L.circle([49.16608033066788, 2.244747752531686], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0,
-    radius: 40 * 370
-}).addTo(map);
+    let circle = L.circle([49.16608033066788, 2.244747752531686], {
+        color: "red",
+        fillColor: "#f03",
+        fillOpacity: 0,
+        radius: 40 * 370,
+    }).addTo(map);
 
-L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-    attribution: '&copy; Google Maps'
-}).addTo(map);
+    L.tileLayer("https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
+        attribution: "&copy; Google Maps",
+    }).addTo(map);
 </script>
