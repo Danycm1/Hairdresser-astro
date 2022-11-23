@@ -1,0 +1,12 @@
+---
+export interface Props {
+    services: string;
+
+}
+
+const { services } = Astro.props as Props;
+---
+
+<td>
+    { services }
+</td>
