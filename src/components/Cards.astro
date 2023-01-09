@@ -1,0 +1,84 @@
+---
+export interface Props {
+    title: string;
+    gender: string;
+    note: string;
+}
+const { title, gender, note } = Astro.props as Props;
+
+const products = {
+  Femme: [
+    { name: "Shampooing + brushing", price: "15€" },
+    { name: "Shampooing + coupe + brushing", price: "15 €" },
+    { name: "Shampooing + coupe fourche + brushing", price: "25 €" },
+    { name: "Shampooing + coupe + couleur* + brushing", price: "45 €" },
+    {
+      name: "Shampooing + coupe + meches/balayages + brushing",
+      price: "50 €",
+    },
+    {
+      name: "Shampooing + coupe + couleur + meches + brushing",
+      price: "65 €",
+    },
+    { name: "Shampooing + coupe + permanente + brushing", price: "70 €" },
+    { name: "Lissage", price: "55 €" },
+    { name: "Pose d'extensions", price: "Sur devis" },
+    { name: "Chignon mariée**", price: "Sur devis" },
+    { name: "Soin visage LHL***", price: "90 €" },
+  ],
+  Homme: [
+    { name: "Shampooing + coupe homme", price: "15 €" },
+    { name: "Shampooing + coupe homme", price: "15 €" },
+    {
+      name: "Shampooing + brushing + coupe + couleur homme",
+      price: "40 €",
+    },
+    { name: "Shampooing + brushing + coupe enfant*", price: "12 €" },
+  ],
+};
+---
+
+<div class="row featurette">
+  <div class="row">
+    <div class="col mb-2">
+      <div class="card h-100 rounded">
+        <div class="card-body">
+          <h5 class="card-product">{title}</h5>
+          <p class="card-text">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Forfait</th>
+                  <th scope="col">Prix</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  gender ==="Femme" &&
+                    products.Femme.map((product) => (
+                      <tr>
+                        <td>{product.name}</td>
+                        <td>{product.price}</td>
+                      </tr>
+                    ))
+                }
+                {
+                  gender === "Homme" &&
+                    products.Homme.map((product) => (
+                      <tr>
+                        <td>{product.name}</td>
+                        <td>{product.price}</td>
+                      </tr>
+                    ))
+                }
+              </tbody>
+            </table>
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{note}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

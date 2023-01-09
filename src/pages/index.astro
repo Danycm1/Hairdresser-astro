@@ -1,6 +1,6 @@
 ---
 import Carousel from "../components/Carousel.astro";
-import Featurette from "../components/Featurette.astro";
+import Cards from "../components/Cards.astro";
 import Gallery from "../components/Gallery.astro";
 import Mapinfo from "../components/Mapinfo.astro";
 import Navbar from "../components/Navbar.astro";
@@ -9,142 +9,141 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="LCM Color">
-	<Navbar />
-	<main>
-		<Carousel />
-		<div class="container marketing">
-			<p class="lead">
-				Fini les déplacement et autres contraints ! <br /> Quoi de mieux
-				que de se faire coiffer sans attendre, sans sortir de chez soi et
-				à des price attractifs !<br /> N'hésitez pas à créer un moment agréable
-				et convivial en réunissant vos proches lors de ma venue afin de découvrir
-				mes différents services.
-			</p>
+  <Navbar />
+  <main>
+    <Carousel />
+    <div class="container marketing">
+      <p class="lead">
+        Fini les déplacement et autres contraints ! <br /> Quoi de mieux que de se
+        faire coiffer sans attendre, sans sortir de chez soi et à des price attractifs
+        !<br /> N'hésitez pas à créer un moment agréable et convivial en réunissant
+        vos proches lors de ma venue afin de découvrir mes différents services.
+      </p>
 
-			<hr class="featurette-divider" />
-			<br />
+      <hr class="featurette-divider" />
+      <br />
 
-			<div class="col-md-7" id="tarif">
-				<h2 class="featurette-heading">Tarifs</h2>
-				<br />
-			</div>
+      <div class="col-md-7" id="tarif">
+        <h2 class="featurette-heading">Tarifs</h2>
+        <br />
+      </div>
 
-			<div class="featurette-grid">
-				<Featurette
-					title="Tarif Femme"
-					tablecol1="Forfait"
-					tablecol2="Prix"
-					product1="Shampooing + brushing"
-					product2="Shampooing + coupe + brushing"
-					product3="Shampooing + coupe fourche + brushing"
-					product4="Shampooing + coupe + couleur* + brushing"
-					product5="Shampooing + coupe + meches/balayages + brushing"
-					product6="Shampooing + coupe + couleur + meches + brushing"
-					product7="Shampooing + coupe + permanente + brushing"
-					product8="Lissage"
-					product9="Pose d'extensions"
-					product10="Chignon mariée**"
-					product11="Soin visage LHL***"
-					price1="15 €"
-					price2="25 €"
-					price3="45 €"
-					price4="50 €"
-					price5="65 €"
-					price6="70 €"
-					price7="55 €"
-					price8="Sur devis"
-					price9="Sur devis"
-					price10="90 €"
-					price11="65 €"
-					note="* Supplément possible **Essai + Jour J*** 1h15 à mon domicile"
-				/>
-				<Featurette
-					title="Tarif Homme & Enfant"
-					tablecol1="Forfait"
-					tablecol2="Prix"
-					product1="Shampooing + coupe homme"
-					product2="Shampooing + brushing + coupe + couleur homme"
-					product3="Shampooing + brushing + coupe enfant*"
-					price1="15 €"
-					price2="40 €"
-					price3="12 €"
-					note="* Enfant de moins de 12 ans"
-				/>
-			</div>
+      <div class="featurette-grid">
+        <Cards
+          title="Femme"
+          gender="Femme"
+          note="* Supplément possible **Essai + Jour J*** 1h15 à mon domicile"
+        />
+        <Cards
+          title="Homme & Enfant"
+          gender="Homme"
+          note="* Enfant de moins de 12 ans"
+        />
+      </div>
 
-			<hr class="featurette-divider" />
-			<br />
+      <hr class="featurette-divider" />
+      <br />
 
-			<div class="col-md-7" id="horaires&contacts">
-				<h2 class="featurette-heading">Horaires & Contact</h2>
-				<p class="lead">
-					Je me déplace dans les secteurs du 60 et 95, dans un rayon
-					de 20km en partant de Chambly.
-				</p>
-				<br />
-			</div>
+      <div class="col-md-7" id="horaires&contacts">
+        <h2 class="featurette-heading">Horaires & Contact</h2>
+        <p class="lead">
+          Je me déplace dans les secteurs du 60 et 95, dans un rayon de 20km en
+          partant de Chambly.
+        </p>
+        <br />
+      </div>
 
-			<div class="featurette-grid">
-				<Featurette
-					title="Heures d'ouvertures"
-					caption="Vous pouvez me joindre au 06 27 38 57 30"
-					tablecol1="Jour"
-					tablecol2="Heures"
-					product1="Lundi"
-					product2="Mardi"
-					product3="Mercredi"
-					product4="Jeudi"
-					product5="Vendredi"
-					product6="Samedi"
-					product7="Dimanche"
-					price1="10h - 19h"
-					price2="10h - 19h"
-					price3="10h - 19h"
-					price4="10h - 19h"
-					price5="10h - 19h"
-					price6="10h - 19h"
-					price7="Fermé"
-					note="Uniquement sur rendez-vous, appelez vite !"
-				/>
-				<Mapinfo />
-			</div>
+      <div class="featurette-grid">
+        <div class="card h-100 rounded">
+          <div class="card-body">
+            <h5 class="card-product">Heures d'ouvertures</h5>
+            <p class="card-text">
+              Vous pouvez me joindre au 06 27 38 57 30
+            </p><table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Jour</th>
+                  <th scope="col">Heures</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lundi</td>
+                  <td>10h - 19h</td>
+                </tr>
+                <tr>
+                  <td>Mardi</td>
+                  <td>10h - 19h</td>
+                </tr>
+                <tr>
+                  <td>Mercredi</td>
+                  <td>10h - 19h</td>
+                </tr>
+                <tr>
+                  <td>Jeudi</td>
+                  <td>10h - 19h</td>
+                </tr>
+                <tr>
+                  <td>Vendredi</td>
+                  <td>10h - 19h</td>
+                </tr>
+                <tr>
+                  <td>Samedi</td>
+                  <td>10h - 19h</td>
+                </tr>
+                <tr>
+                  <td>Dimanche</td>
+                  <td>Fermé</td>
+                </tr>
+              </tbody>
+            </table>
+            <p></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"
+              >Uniquement sur rendez-vous, appelez vite !</small
+            >
+          </div>
+        </div>
+        <Mapinfo />
+      </div>
 
-			<hr class="featurette-divider" />
-			<br />
+      <hr class="featurette-divider" />
+      <br />
 
-			<div class="col-md-7" id="galeries">
-				<h2 class="featurette-heading">Galerie Photos</h2>
-				<br />
-			</div>
+      <div class="col-md-7" id="galeries">
+        <h2 class="featurette-heading">Galerie Photos</h2>
+        <br />
+      </div>
 
-			<Gallery />
+      <Gallery />
 
-			<hr class="featurette-divider" />
+      <hr class="featurette-divider" />
 
-			<Footer />
-		</div>
-	</main>
+      <Footer />
+    </div>
+  </main>
 </Layout>
 
 <style>
-	.featurette-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-	.featurette-divider {
-		margin: 5rem 0;
-	}
-	.featurette-heading {
-		letter-spacing: -0.05rem;
-	}
-	.marketing .col-lg-4 {
-		margin-bottom: 1.5rem;
-		text-align: center;
-	}
-	.marketing .col-lg-4 p {
-		margin-right: 0.75rem;
-		margin-left: 0.75rem;
-	}
+  .featurette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+  .featurette-divider {
+    margin: 5rem 0;
+  }
+  .featurette-heading {
+    letter-spacing: -0.05rem;
+  }
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+  }
 </style>
