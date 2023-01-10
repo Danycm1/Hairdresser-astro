@@ -1,8 +1,8 @@
 ---
 export interface Props {
-    title: string;
-    gender: string;
-    note: string;
+  title: string;
+  gender: string;
+  note: string;
 }
 const { title, gender, note } = Astro.props as Props;
 
@@ -54,22 +54,19 @@ const products = {
               </thead>
               <tbody>
                 {
-                  gender ==="Femme" &&
-                    products.Femme.map((product) => (
-                      <tr>
-                        <td>{product.name}</td>
-                        <td>{product.price}</td>
-                      </tr>
-                    ))
-                }
-                {
-                  gender === "Homme" &&
-                    products.Homme.map((product) => (
-                      <tr>
-                        <td>{product.name}</td>
-                        <td>{product.price}</td>
-                      </tr>
-                    ))
+                  gender === "Femme"
+                    ? products.Femme.map((product) => (
+                        <tr>
+                          <td>{product.name}</td>
+                          <td>{product.price}</td>
+                        </tr>
+                      ))
+                    : products.Homme.map((product) => (
+                        <tr>
+                          <td>{product.name}</td>
+                          <td>{product.price}</td>
+                        </tr>
+                      ))
                 }
               </tbody>
             </table>
